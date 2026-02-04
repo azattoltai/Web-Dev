@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #1f2328;
+    line-height: 1.5;
+}
+
+.hero-header {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f6f8fa;
+    border-bottom: 1px solid #d0d7de;
+}
+
+.hero-header h1 {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+}
+
+.hero-header p {
+    font-size: 20px;
+    color: #636c76;
+    margin-bottom: 32px;
+}
+
+.cta-main {
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #1f2328;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cta-main:hover {
+    background-color: #24292f;
+}
+
+/* Pricing Grid Layout */
+.pricing-container {
+    max-width: 1200px;
+    margin: -40px auto 0;
+    padding: 0 20px;
+}
+
+.pricing-grid {
+    display: flex;
+    gap: 24px;
+}
+
+.price-card {
+    background: #ffffff;
+    border: 1px solid #d0d7de;
+    border-radius: 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.price-card:hover {
+    transform: translateY(-8px);
+}
+
+.price-card.recommended {
+    border: 2px solid #0969da;
+    box-shadow: 0 8px 24px rgba(140, 149, 159, 0.15);
+}
+
+.promo-badge {
+    position: absolute;
+    top: -14px;
+    left: 24px;
+    background: #0969da;
+    color: #ffffff;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 32px;
+    border-bottom: 1px solid #d0d7de;
+}
+
+.plan-title {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.price-value {
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.price-value span {
+    font-size: 14px;
+    color: #636c76;
+    font-weight: 400;
+}
+
+.plan-info {
+    font-size: 15px;
+    color: #636c76;
+    margin-bottom: 24px;
+    min-height: 45px;
+}
+
+.btn-outline, .btn-primary {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #d0d7de;
+    transition: 0.2s;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #0969da;
+}
+
+.btn-outline:hover {
+    background-color: #f6f8fa;
+}
+
+.btn-primary {
+    background: #0969da;
+    color: white;
+    border-color: #0969da;
+}
+
+.btn-primary:hover {
+    background-color: #0860ca;
+}
+
+.features {
+    padding: 24px 32px;
+    list-style: none;
+}
+
+.features li {
+    font-size: 14px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.features li::before {
+    content: "✓";
+    color: #1a7f37;
+    margin-right: 12px;
+    font-weight: bold;
+}
+
+.addons-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.section-label {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #d0d7de;
+}
+
+.addons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.addon-item {
+    border: 1px solid #d0d7de;
+    padding: 24px;
+    border-radius: 8px;
+    background: #ffffff;
+    transition: box-shadow 0.2s;
+}
+
+.addon-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.addon-item h3 {
+    font-size: 18px;
+    color: #0969da;
+    margin-bottom: 10px;
+}
+
+.addon-item p {
+    font-size: 14px;
+    color: #636c76;
+}
+
+@media (max-width: 1024px) {
+    .pricing-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .price-card {
+        width: 100%;
+        max-width: 500px;
+    }
+    .addons-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .addons-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-header h1 {
+        font-size: 32px;
+    }
+}
